@@ -1,8 +1,15 @@
+import secrets
 import struct
-from ctypes import create_string_buffer
+from ctypes import Array, c_char, create_string_buffer
+
+from defs import ALPHANUMERICS
 
 
-def varuint_encode(number, offset: int = 0):
+def generate_nonce() -> str:
+    return "".join(secrets.choice(ALPHANUMERICS) for _ in range(11))
+
+
+def varuint_encode(number: int, offset: int = 0) -> Array[c_char]:
     """Encode an integer into a bytearray
 
     Args:
