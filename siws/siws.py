@@ -7,9 +7,9 @@ from ecdsa import SECP256k1, VerifyingKey
 from pydantic import AnyUrl, BaseModel, Field
 
 from siws import exceptions
-from siws.custom_types import CustomDateTime
-from siws.parsed import ABNFParsedMessage, RegExpParsedMessage
-from siws.utils import build_signature, encode_defunc
+from .custom_types import CustomDateTime
+from .parsed import ABNFParsedMessage, RegExpParsedMessage
+from .utils import build_signature, encode_defunc
 
 
 class SiwsMessage(BaseModel):
