@@ -2,7 +2,7 @@ import secrets
 import struct
 from ctypes import Array, c_char, create_string_buffer
 
-from defs import ALPHANUMERICS
+from siws.defs import ALPHANUMERICS
 
 
 def generate_nonce() -> str:

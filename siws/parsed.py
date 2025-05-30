@@ -2,8 +2,8 @@ import re
 
 import abnf
 
-from .defs import REGEX_MESSAGE
-from .grammars import eip4361
+from siws.defs import REGEX_MESSAGE
+from siws.grammars import eip4361
 
 
 class RegExpParsedMessage:
